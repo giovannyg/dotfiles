@@ -88,6 +88,7 @@ ahead = '[⇡${count}](green)'
 diverged = '[⇕⇡${ahead_count}⇣${behind_count}](red)'
 behind = '[⇣${count}](red)'
 staged = '[++\($count\)](green)'
+deleted = '[✘](red)'
 
 [git_commit]
 commit_hash_length = 4
