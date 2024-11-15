@@ -1,0 +1,9 @@
+.config/Code/User/History
+.config/Code/User/workspaceStorage
+.config/Code/User/sync
+.config/Code/logs
+.config/Code/Cache/
+.config/Code/CachedProfilesData
+.config/Code/Session
+
+.config/Code/User/globalStorage

@@ -1,0 +1,182 @@
+{
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.titleBarStyle": "custom",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#2e3440",
+    "list.activeSelectionForeground": "#fdff7d",
+    "list.hoverForeground": "#fdff7d",
+    "tab.activeBorder": "#90C4F9",
+    "tab.activeBackground": "#2e3440"
+  },
+  "editor.tabSize": 2,
+  "[php]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "editor.hover.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.rulers": [120],
+  "editor.renderWhitespace": "none",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "material-icon-theme",
+  "scm.inputFontSize": 14,
+  "window.zoomLevel": 0.5,
+  "editor.minimap.maxColumn": 80,
+  "editor.fontFamily": "'Fira Code', Consolas, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.largeFileOptimizations": false,
+  "extensions.ignoreRecommendations": true,
+  "webhint.enableTelemetry": "disabled",
+  "php.validate.enable": false,
+  // "php.validate.executablePath": "${workspaceRoot}/workspace-php",
+  "php.validate.run": "onSave",
+  "settingsSync.keybindingsPerPlatform": false,
+  "editor.cursorBlinking": "solid",
+  "terminal.integrated.cursorStyle": "line",
+  "faker.locale": "es_MX",
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
+  "emmet.includeLanguages": {
+    "blade": "html"
+  },
+  "vetur.format.options.tabSize": 2,
+  "vetur.format.options.useTabs": false,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  // "[javascript]": {
+  //   "editor.formatOnSave": false
+  // },
+  "diffEditor.wordWrap": "on",
+  "window.menuBarVisibility": "toggle",
+  "editor.minimap.enabled": false,
+  "scss.completion.completePropertyWithSemicolon": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "php-docblocker.classTemplate": {
+    "description": {
+      "content": "Undocumented class"
+    }
+  },
+  "php-docblocker.author": {
+    "name": "Giovanny Noé González Pelayo",
+    "email": "giovanny@autodeal.mx"
+  },
+  "php-docblocker.functionTemplate": {
+    "description": {
+      "gapAfter": true,
+      "content": "Undocumented method"
+    },
+    "author": {
+      "content": "@author ${###:Giovanny Noé González Pelayo} <${###:giovanny@autodeal.mx}>"
+    },
+    "param": {},
+    "return": {}
+  },
+  "activitusbar.views": [
+    // {
+    //   "name": "settings",
+    //   "codicon": "settings-gear"
+    // },
+    // {
+    //   "name": "explorer",
+    //   "codicon": "explorer-view-icon"
+    // },
+    // {
+    //   "name": "search",
+    //   "codicon": "search-view-icon"
+    // },
+    // {
+    //   "name": "scm",
+    //   "codicon": "source-control-view-icon"
+    // },
+    // {
+    //   "name": "debug",
+    //   "codicon": "run-view-icon"
+    // }
+  ],
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.matchBrackets": "always",
+  "editor.occurrencesHighlight": "off",
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "namespaceResolver.exclude": "*/node_modules/*", // Exclude glob pattern while finding files
+  "namespaceResolver.showMessageOnStatusBar": true, // Show message on status bar instead of notification box
+  "namespaceResolver.autoSort": true, // Auto sort after imports
+  "namespaceResolver.sortOnSave": true, // Auto sort when a file is saved
+  "namespaceResolver.sortAlphabetically": false, // Sort imports in alphabetical order instead of line length
+  "namespaceResolver.sortNatural": false, // Sort imports using a 'natural order' algorithm
+  "namespaceResolver.leadingSeparator": true, // Expand class with leading namespace separator
+  "namespaceResolver.highlightOnSave": false, // Auto highlight not imported and not used when a file is saved
+  "namespaceResolver.highlightOnOpen": false,
+  "search.useIgnoreFiles": false,
+  "php.suggest.basic": false,
+  "files.associations": {
+    "*.conf.template": "properties"
+  },
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "editor.stickyScroll.enabled": false,
+  "window.commandCenter": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "tags"],
+  "gitlens.currentLine.enabled": true,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "eslint.run": "onSave",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.semanticTokenColorCustomizations": {
+    "[One Dark Pro Darker]": {
+      "enabled": true,
+      "rules": {
+        "function": {
+          "bold": true
+        },
+        "parameter": {
+          "italic": false
+        }
+      }
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["entity.other.attribute-name.jsx"],
+        "settings": { "fontStyle": "" }
+      }
+    ]
+  },
+  "amazonQ.workspaceIndexUseGPU": true,
+  "workbench.activityBar.location": "bottom",
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.js": "Page: ${dirname}"
+  },
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 115,
+  "html.format.wrapLineLength": 115
+}
