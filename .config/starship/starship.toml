@@ -1,0 +1,118 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for commands executed by starship (ms)
+command_timeout = 1000
+
+add_newline = false
+
+format = """
+$os\
+$username\
+$hostname $directory\
+$localip\
+$shlvl\
+$singularity\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$container\
+$php\
+$python\
+$red\
+$env_var\
+$custom\
+$sudo\
+$line_break\
+$jobs\
+$status\
+$character
+"""
+
+# move the rest of the prompt to the right
+right_format = """
+$cmd_duration
+"""
+
+[os]
+format = '[$symbol](white) '
+disabled = false
+
+[os.symbols]
+Ubuntu = "󰕈"
+Manjaro = ""
+Linux = "󰌽"
+Fedora = "󰣛"
+Debian = "󰣚"
+
+[username]
+disabled = false
+style_user = "white"
+style_root = "red bold"
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+disabled = false
+ssh_only = false
+format = "[@$hostname](white)"
+
+[character]
+success_symbol = "[❯](bold purple)"
+error_symbol = "[❯](bold red)"
+
+[line_break]
+disabled = false
+
+[directory]
+truncation_length = 15
+truncation_symbol = "…/"
+truncate_to_repo = false
+style = 'cyan'
+
+[git_branch]
+format = 'on [$symbol](purple)[$branch(:$remote_branch)](bold purple) '
+symbol = " "
+
+[git_status]
+style = 'purple'
+modified = '[!](red)'
+untracked = '[?](red)'
+ahead = '[⇡${count}](green)'
+diverged = '[⇕⇡${ahead_count}⇣${behind_count}](red)'
+behind = '[⇣${count}](red)'
+staged = '[++\($count\)](green)'
+
+[git_commit]
+commit_hash_length = 4
+
+[env_var.SHELL]
+variable = "SHELL"
+default = "unknown shell"
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = '[$duration](yellow)'
+
+[php]
+disabled = true
+
+[nodejs]
+disabled = true
+detect_files = []
+
+[aws]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[package]
+disabled = true

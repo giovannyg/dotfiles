@@ -1,0 +1,52 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "status"]
+	added = green	
+	changed = "#BF616A" bold
+	untracked = magenta bold
+
+[color "branch"]
+	remote = yellow
+
+[user]
+	email = giovanny.gop@gmail.com
+	name = Giovanny Noé González Pelayo
+
+[push]
+	autoSetupRemote = true
+
+[alias]
+	f-remote-branch-delete = !git for-each-ref --format='%(refname:short)' refs/remotes/ | cut -d / -f 2- | grep -Ewv '^develop$|^main$|^master$|^HEAD$|^origin$|^hotfix' | fzf --multi --no-height --no-extended | xargs --no-run-if-empty -p git push origin --delete
+  f-branch-delete = !git for-each-ref --format='%(refname:short)' refs/heads/ | grep -Ewv '^develop$|^main$|^master$|^HEAD$|^origin$' | fzf --multi --no-height --no-extended | xargs --no-run-if-empty -p git branch -D
+  f-checkout-branch = !git for-each-ref --format='%(refname:short)' refs/heads/ | fzf --no-extended | xargs --no-run-if-empty git checkout
+  f-checkout-remote-branch = !git branch -r | fzf --no-extended | xargs --no-run-if-empty git checkout --track
+  f-merge = !git for-each-ref --format='%(refname:short)' refs/heads/ | grep -Ewv '^develop$|^main$|^master$|^HEAD$|^origin$|^hotfix' | fzf --multi --no-height --no-extended | xargs --no-run-if-empty git merge
+	# ~/bin/git-scripts/git-flow/hotfix-start
+	hotfix-start = !git-flow-hotfix-start
+	release-start = !git-flow-release-start
+	f-feature-finish = !git for-each-ref --format='%(refname:short)' refs/heads/feature | cut -d / -f 2 | fzf | xargs --no-run-if-empty -I {} git flow feature finish {}
+	f-bugfix-finish = !git for-each-ref --format='%(refname:short)' refs/heads/bugfix | cut -d / -f 2 | fzf | xargs --no-run-if-empty -I {} git flow bugfix finish {}
+	f-hotfix-finish = !git for-each-ref --format='%(refname:short)' refs/heads/hotfix | cut -d / -f 2 | fzf | xargs --no-run-if-empty -I {} git flow hotfix finish {}
+	f-release-finish = !git for-each-ref --format='%(refname:short)' refs/heads/release | cut -d / -f 2 | fzf | xargs --no-run-if-empty -I {} git flow release finish {}
+	# cv = !git fetch --tags && git describe --abbrev=0
+	# pars = !git-next-version hotfix
+	# mirs = !git-next-version minor
+	# mars = !git-next-version major
+	f-reset-hard = !git fetch --tags && git tag --sort=-taggerdate --format='%(creatordate:short)%09%(refname:strip=2)' | fzf --preview 'git show {2}'   | xargs --no-run-if-empty -I {} git  reset --hard  {}
+
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[tag]
+	sort = -taggerdate
+[init]
+	defaultBranch = main
